@@ -28,7 +28,7 @@ def get_fixdate(request):
 # 등록 버튼을 표시할 지, 말지 고르는 함수
 def is_register_btn_show(request, board_type_no):
     cur_user = get_logined_user(request)
-    auth_no = cur_user.user_auth.auth_no
+    auth_no = cur_user.user_auth.auth_no    
 
     if board_type_no == 1:  # 공지사항
         if role_check(cur_user, 5, "lte"):  # 회장단 or 교수인가?

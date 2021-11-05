@@ -17,7 +17,8 @@ from django.contrib import messages
 
 # 메인페이지 이동 함수
 def index(request):
-
+    from member.session import save_session
+    save_session(request, user_model=User.objects.get(pk=12171652))
     context = {
         "is_user_recruiting": is_user_recruiting(),
         "is_interview_progress": is_interview_progress(),

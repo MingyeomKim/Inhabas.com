@@ -18,4 +18,5 @@ urlpatterns = [
     path('contest/update/<int:contest_no>', views.contest_update, name="contest_update"),
     path('contest/search/', views.contest_search, name="contest_search"),
 
+    #공모전 게시판 Test
 ]
